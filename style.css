@@ -3,16 +3,17 @@
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
-    box-sizing: border-box; /* Ensures padding/margins don't affect layout */
+    box-sizing: border-box; /* Prevents padding/margins from affecting size */
 }
 
 html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Completely remove scrolling */
+    overflow: hidden; /* Completely removes scrolling */
     display: flex;
-    justify-content: flex-start; /* Aligns to the left */
-    align-items: flex-start; /* Aligns to the top */
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content to the top */
+    align-items: flex-start; /* Aligns content to the left */
 }
 
 #game-container {
@@ -22,12 +23,16 @@ html, body {
     flex-direction: column; /* Ensures button stays below the board */
     justify-content: flex-start;
     align-items: flex-start;
-    overflow: hidden; /* Prevents internal scrolling */
+    overflow: hidden; /* Prevents any internal scrolling */
+    position: fixed; /* Ensures it takes up the full screen */
+    top: 0;
+    left: 0;
 }
 
 #game-board {
     background: #0074B3;
     width: 730px;
+    height: auto; /* Adjusts automatically */
     display: flex;
     padding: 0; /* Remove extra padding */
 }
@@ -59,4 +64,7 @@ circle.yellow {
     font-size: 16px;
     cursor: pointer;
     align-self: flex-start; /* Aligns button to the left */
+    position: absolute;
+    bottom: 10px; /* Moves button close to the bottom */
+    left: 10px; /* Aligns button to the left */
 }
