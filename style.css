@@ -1,0 +1,55 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: flex-start; /* Aligns to the left */
+    align-items: flex-start; /* Aligns to the top */
+    height: 100vh;
+    padding: 20px;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#game-board {
+    background: #0074B3;
+    width: 730px;
+    display: flex;
+    padding: 10px;
+}
+
+.column {
+    width: 100px;
+    display: inline-block;
+}
+
+.column:hover circle.free {
+    fill: #D5E4ED;
+}
+
+circle.free {
+    fill: #fff;
+}
+
+circle.red {
+    fill: #D50000;
+}
+
+circle.yellow {
+    fill: #DAD400;
+}
+
+#change-player {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-start; /* Align button to the left */
+}

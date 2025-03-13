@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>c4</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="game-board">
+            <script>
+                for (let x = 0; x < 7; x++) {
+                    document.write(`<div class="column" data-x="${x}" id="column-${x}">`);
+                    for (let y = 5; y >= 0; y--) {
+                        document.write(`<svg class="cell row-${y}" width="100" height="100">
+                            <circle cx="50" cy="50" r="40" class="free"></circle>
+                        </svg>`);
+                    }
+                    document.write(`</div>`);
+                }
+            </script>
+        </div>
+
+        <button id="change-player">Change Player (Current: Red)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
